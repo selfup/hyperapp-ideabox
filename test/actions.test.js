@@ -1,17 +1,33 @@
+import { SWILL } from './../src/constants';
 import actions from './../src/actions';
 
-test('Actions add', () => {
-  const addResult = actions.add()({ num: 0 });
+test('updateField', () => {
+  const updateField = actions.updateField({
+    target: {
+      id: 'title',
+      value: 'wow ',
+    },
+  })();
 
-  expect(addResult).toEqual({
-    num: 1,
+  expect(updateField).toEqual({
+    title: 'wow',
   });
 });
 
-test('Actions sub', () => {
-  const addResult = actions.sub()({ num: 1 });
+test('submit', () => {
+  const submit = actions.submit()({
+    title: 'a',
+    body: 'b',
+    ideas: [],
+  });
 
-  expect(addResult).toEqual({
-    num: 0,
+  expect(submit).toEqual({
+    title: '',
+    body: '',
+    ideas: [{
+      title: 'a',
+      body: 'b',
+      quality: SWILL,
+    }],
   });
 });

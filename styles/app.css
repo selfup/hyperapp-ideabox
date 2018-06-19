@@ -1,63 +1,118 @@
 body {
   font-family: sans-serif;
+  background-color: lightgray;
   display: flex;
   justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  margin: 0;
-  font-size: calc(10px + 2vmin);
-}
-
-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-section > *+* {
-  margin-left: 2rem;
-}
-
-button {
-  padding: 0 1rem;
-  border: none;
-  font-size: 2rem;
-  height: 3rem;
+  zoom: 150%;
 }
 
 h1 {
-  font-size: calc(20px + 6vmin);
-  margin-top: 0;
-  margin-bottom: 1rem;
+  padding-top: 0.5em;
+}
+
+a, a:visited, a:hover, a:focus, a:active {
+  text-decoration: none;
+}
+
+a {
+  color: orange;
+}
+
+a:visited {
+  color: lightblue;
+}
+
+a:hover {
+  color: turquoise;
+}
+
+a:focus {
+  color: teal;
+}
+
+a:active {
+  color: lightturquoise;
+}
+
+button {
+  border-radius: 0px;
+  border-style: none;
+  border-width: 1px;
+  margin: 10px;
+  outline-color: darkturquoise;
+}
+
+.idea-box {
+  border-radius: 0px;
+  background-color: white;
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  -webkit-box-shadow: 0 8px 6px -6px grey;
+	-moz-box-shadow: 0 8px 6px -6px grey;
+	box-shadow: 0px 8px 8px -6px grey;
+}
+
+.ideas {
   text-align: center;
 }
 
-p {
-  text-align: center;
-  margin-top: 0;
+.idea {
+  margin-top: 5px;
+  width: 400px;
+  margin: 0 auto;
 }
 
-.count {
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: 4rem;
-  color: #333;
-}
-
-[disabled] + .count {
-  color: #999;
+.actions {
+  padding-bottom: 5px;
 }
 
 .add {
   background-color: mediumseagreen;
-  color: #fff;
+  font-size: 18px;
+  color: black;
+  width: 30px;
 }
 
 .sub {
   background-color: mediumvioletred;
-  color: #fff;
+  font-size: 18px;
+  color: black;
+  width: 30px;
 }
 
-.sub[disabled] {
-  opacity: .5;
+.delete {
+  background-color: orange;
+  font-size: 18px;
+  color: black;
+  width: 30px;
+}
+
+.submit {
+  background-color: darkorange;
+  color: black;
+  border-style: none;
+  padding: 0.5em;
+}
+
+input {
+  outline: 0;
+  border-width: 0 0 1.5px 0;
+  border-color: dodgerblue;
+}
+
+input:focus {
+  border-color: deeppink
+}
+
+.swill {
+  background-color: lightskyblue;
+}
+
+.plausible {
+  background-color: lightsalmon;
+}
+
+.genius {
+  background-color: lightcoral;
 }
