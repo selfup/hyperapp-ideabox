@@ -31,12 +31,19 @@ export default {
     };
   },
 
-  changeQuality: ({ target: { id, class: className } }) => (state) => {
+  changeQuality: ({
+    target: {
+      id,
+      classList: {
+        value,
+      },
+    },
+  }) => (state) => {
     const ideas = state.ideas.map((idea, index) => {
       const newIdea = Object.assign({}, idea);
 
       if (index === (parseInt(id, 10))) {
-        newIdea.quality = state.qualityKey[className][newIdea.quality];
+        newIdea.quality = state.qualityKey[value][newIdea.quality];
       }
 
       return newIdea;
